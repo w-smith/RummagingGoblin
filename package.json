@@ -1,0 +1,30 @@
+{
+  "name": "rummaginggoblin",
+  "version": "1.0.0",
+  "description": "Simple search tool for M:tG",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/w-smith/Project2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/w-smith/Project2/issues"
+  },
+  "homepage": "https://github.com/w-smith/Project2#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "chai": "^4.1.2",
+    "express": "^4.16.2",
+    "install": "^0.10.2",
+    "mocha": "^4.1.0",
+    "mongo": "^0.1.0",
+    "mongoose": "^5.0.0-rc2",
+    "npm": "^5.6.0",
+    "request": "^2.83.0"
+  }
+}
