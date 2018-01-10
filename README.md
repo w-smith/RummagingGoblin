@@ -23,9 +23,9 @@ https://trello.com/b/csOeb12j/project-2
 <br>
 <h2>MOCKUP</h2>
 <br>
-![alt text](https://imgur.com/WcF3Xle)
+<img src="https://i.imgur.com/WcF3Xle.png?1" title="login" />
 <br>
-![alt text](https://imgur.com/90FLhjU)
+<img src="https://i.imgur.com/90FLhjU.png?1" title="main"/>
 <br>
 <h2>TECHNOLOGY USED</h2>
 <br>
