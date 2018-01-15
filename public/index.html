@@ -4,9 +4,9 @@
 	<meta charset="UTF-8">
 	<title>Rummaging Goblin</title>
 
-
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<link rel="stylesheet" href="../public/css/style.css">
+<link rel="stylesheet" href="./css/style.css">
 
 
 
@@ -22,11 +22,13 @@
 
     	<div class="col-sm-4 left">
     		<div class="blue">
+    			<h1>Search</h1>
+    			<br>
 				<div class="form">
-					<form>
+					<form action="https://api.magicthegathering.io/v1/cards" method="get">
 						search:
 						<input type="text" name="name" placeholder="Card Name">
-						<input type="submit">
+						<input class="submit" type="submit">
 					
 						<br>
 						<br>
@@ -104,13 +106,15 @@
 			</div>
 
 			<div class="red">
-				<h1>red</h1>
+				<h1>Your Cards</h1>
     		</div>
     	</div>
 
 		<div class="col-sm-8 green">
 
-		<div class="col-sm-12 white"></div>
+			<div class="col-sm-12 white">
+				<h1>Output</h1>
+			</div>
 
 		</div>
 		
