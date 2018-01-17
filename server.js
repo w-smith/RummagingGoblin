@@ -6,6 +6,8 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 
 
+var port = process.env.PORT || 3000;
+
 mongoose.connect("mongodb://localhost/cards");
 
 var db = mongoose.connection;
@@ -40,7 +42,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 
 
-
-app.listen(3000);
+app.listen(port);
 
 console.log("API server started on: port 3000");
