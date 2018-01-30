@@ -13,7 +13,7 @@ var CardSchema = new Schema({
 
 });
 
-var Card = model('Cards', CardSchema);
+var Card = mongoose.model('Cards', CardSchema);
 
 
 

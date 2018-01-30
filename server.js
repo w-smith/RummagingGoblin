@@ -1,47 +1,31 @@
 //Required dependencies
-const express = require("express");
-//Object to represent the express application
-const app = express();
-const bodyParser = require("body-parser");
-const mongoose = require("mongoose");
+var express = require("Express");
 
+var bodyParser = require("body-parser");
+var app = express();
+var mongoose = require("mongoose");
+var PORT = process.env.PORT || 3000;
+const router = require("./config/routes");
 
-var port = process.env.PORT || 3000;
 
 mongoose.connect("mongodb://localhost/cards");
 
 var db = mongoose.connection;
 
+app.set('views', './views');
+
+
+
 app.use(express.static(__dirname + '/public'));
-app.use(bodyParser.urlencoded({ extended: true }));
-
-
-// app.get("/", function(req, res){
-// 	res.send("hey bitches");
-
-// });
 
 
 
-// var button = document.getElementById("submit");
-
-// button.addEventListener('click', function() {
-// 	var x = document.getElementById('input');
-// 	var cardRequest = new XMLHttpRequest();
-// 	cardRequest.open('GET', "http://api.magicthegathering.io/v1/cards?" + x.value);
-//   wordInput = x.value; 
-// 	ourRequest.onload = function() {
-// 		var ourData = JSON.parse(cardRequest.responseText);
-// 		renderHTML(ourData);
-
-// 	};
-// 	cardRequest.send();
-
-// 	console.log(ourData);
-// });
 
 
 
-app.listen(port);
 
-console.log("API server started on: port 3000");
+
+
+app.use(router);
+
+app.listen(PORT, ()=> console.log("API server started on: port 3000"));
