@@ -9,6 +9,10 @@ var api = require('../controllers/api_controller.js');
 
 router.get('/', view.index);
 
+router.route('/api/cards')
+.get(api.cardSearch);
+
+
 
 
 

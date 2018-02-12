@@ -1,6 +1,6 @@
 //Required dependencies
 var express = require("Express");
-
+var ejs = require("ejs");
 var bodyParser = require("body-parser");
 var app = express();
 var mongoose = require("mongoose");
@@ -13,9 +13,7 @@ mongoose.connect("mongodb://localhost/cards");
 var db = mongoose.connection;
 
 app.set('views', './views');
-
-
-
+app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
 
 

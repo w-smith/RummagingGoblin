@@ -25,10 +25,10 @@
     			<h1>Search</h1>
     			<br>
 				<div class="form">
-					<form id="urlForm" action="https://api.magicthegathering.io/v1/cards" method="get">
+					<form id="searchForm" action="/api/cards" method='get'>
 						search:
 						<input type="text" name="name" placeholder="Card Name">
-						<input id="submit" type="submit">
+						
 					
 						<br>
 						<br>
@@ -91,12 +91,13 @@
 <br><br>
 						Set:
 						<input type="text" name="set" placeholder="Set Code">
+						  <button id="myButton" type="button" value="Submit">Search</button>
 
 					</form>	
 					</form>	
+	
 
-
-
+					<h1 id="cardoutput"></h1>
 
 
 						<br>
@@ -114,6 +115,8 @@
 
 			<div class="col-sm-12 white">
 				<h1>Output</h1>
+
+
 			</div>
 
 		</div>
