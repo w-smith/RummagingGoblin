@@ -6,7 +6,7 @@ event.preventDefault();
 	$.get('api/cards').done(function(postCards){
 		console.log('post test');
 
-		$('#cardoutput').append(postCards.cards.name);
+		$('#output').append(postCards.cards.name);
 
 	});
 
