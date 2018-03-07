@@ -10,15 +10,17 @@ var cards = require("../models/cardModel.js");
 //         res.send(jsonBody);
 
 // });
-// };
+// // };
+// myButton.addEventListener('click', function() {
+	
+// 	var x = document.getElementById('input');
+// 	var ourRequest = new XMLHttpRequest();
+// 	ourRequest.open('GET',
+// 		'https://api.magicthegathering.io/v1/cards/'+input.value); 
+// 		ourRequest.onload = function() {
+// 		var ourData = JSON.parse(ourRequest.responseText);
 
-function cardSearch(req, res) {
-	request('https://api.magicthegathering.io/v1/cards', function (error, response, body){
-		var parsedJson = JSON.parse(body);
-		res.send(parsedJson);
-	});
-}
 
-module.exports = { cardSearch : cardSearch };
+// 		module.exports = { cardSearch : cardSearch };
 
-
+// 		}})

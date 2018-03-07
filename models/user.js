@@ -8,10 +8,11 @@ var User = mongoose.Schema({
   }
 });
 
+// password hash
 User.methods.encrypt = function(password) {
   return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
 };
-
+// password check
 User.methods.validPassword = function(password) {
   return bcrypt.compareSync(password, this.local.password);
 };

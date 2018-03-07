@@ -1,24 +1,10 @@
-$(document).ready(function() {
+	// url: "https://api.magicthegathering.io/v1/cards" 
 
-	$('#myButton').on('click', function(event) {
-event.preventDefault();
 
-	$.get('api/cards').done(function(postCards){
-		console.log('post test');
-
-		$('#output').append(postCards.cards.name);
-
-	});
-
-		// $.ajax({
-		// method: "GET",
-		// url: "https://api.magicthegathering.io/v1/cards" 
-		// })
-		// .done(response=> {
-		// console.log(response);
-		// });
-
-	});
-
-});
-
+	myButton.addEventListener('click', function() {
+	
+		var x = document.getElementById('input');
+		var ourRequest = new XMLHttpRequest();
+		ourRequest.open('GET',
+		"https://api.magicthegathering.io/v1/cards"); 
+	})

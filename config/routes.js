@@ -27,20 +27,21 @@ function authenticatedUser(req, res, next) {
     res.redirect('/');
   }
 
+// home route
 router.route('/')
   .get(staticsController.home);
-
+// signup route
 router.route('/signup')
   .get(usersController.getSignup)
   .post(usersController.postSignup)
-
+// logout route
 router.route('/login')
   .get(usersController.getLogin)
   .post(usersController.postLogin)
-
+// logout
 router.route("/logout")
   .get(usersController.getLogout)
-
+// SECRET ROUTE
  router.route("/secret")
    .get(authenticatedUser, usersController.secret)
 
